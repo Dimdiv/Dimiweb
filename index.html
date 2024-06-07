@@ -44,7 +44,7 @@
             padding-left: 2%;
             padding-right: 2%;
         }
-        .navbar-brand{
+        .navbar-brand {
             color: rgb(255, 255, 255);
             text-shadow: 0px 0px 8px rgb(255, 255, 255);
             font-family: "Seymour One", sans-serif;
@@ -95,18 +95,132 @@
             width: 100%;
             height: auto;
         }
-        .infolug{
+        .infolug {
             font-size: 2vw;
             text-decoration: none;
-            
         }
-        .infolug > a{
+        .infolug > a {
             color: white;
             text-decoration: none;
         }
-        .infolug > a:hover{
+        .infolug > a:hover {
             color: rgb(172, 172, 172);
             text-decoration: none;
+        }
+        .interview-container {
+            background-image: url('radio1.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 5% 0;
+            text-align: center;
+            color: white;
+            border-radius: 10px;
+            margin-top: 2vw;
+        }
+        .interview-title {
+            font-size: 5vw;
+            margin-bottom: 1vw;
+        }
+        .interview-item {
+            background-color: white;
+            color: black;
+            border-radius: 10px;
+            padding: 1vw;
+            margin: 1vw;
+            text-align: center;
+        }
+        .interview-item img {
+            border-radius: 5px;
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .interview-item-title {
+            font-size: 15px;
+            margin-top: 1vw;
+        }
+        .interview-item-content {
+            font-size: 10px;
+            padding: 0.5vw;
+        }
+        button {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            outline: none;
+            border: 0;
+            vertical-align: middle;
+            text-decoration: none;
+            background: transparent;
+            padding: 0;
+            font-size: inherit;
+            font-family: inherit;
+        }
+        button.learn-more {
+            width: 12rem;
+            height: auto;
+            margin: 2rem auto;
+        }
+        button.learn-more .circle {
+            transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+            position: relative;
+            display: block;
+            margin: 0;
+            width: 3rem;
+            height: 3rem;
+            background: #ffffff;
+            border-radius: 1.625rem;
+        }
+        button.learn-more .circle .icon {
+            transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            background: #ffffff;
+        }
+        button.learn-more .circle .icon.arrow {
+            transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+            left: 0.625rem;
+            width: 1.125rem;
+            height: 0.125rem;
+            background: none;
+        }
+        button.learn-more .circle .icon.arrow::before {
+            position: absolute;
+            content: "";
+            top: -0.29rem;
+            right: 0.0625rem;
+            width: 0.625rem;
+            height: 0.625rem;
+            border-top: 0.125rem solid #6200b3;
+            border-right: 0.125rem solid #6200b3;
+            transform: rotate(45deg);
+        }
+        button.learn-more .button-text {
+            transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 0.75rem 0;
+            margin: 0 0 0 1.85rem;
+            color: #ffffff;
+            font-weight: 700;
+            line-height: 1.6;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        button:hover .circle {
+            width: 100%;
+        }
+        button:hover .circle .icon.arrow {
+            background: #fff;
+            transform: translate(1rem, 0);
+        }
+        button:hover .button-text {
+            color: #6200b3;
         }
     </style>
 </head>
@@ -151,6 +265,35 @@
                 </div>
             </div>
         </div>
+
+        <div class="interview-container">
+            <div class="interview-title">Entrevistas</div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-3 interview-item">
+                <img src="paraiso33.jpeg" alt="Entrevista 1">
+                <div class="interview-item-title">Paraiso 33</div>
+                <div class="interview-item-content">Descripción de la entrevista 1.</div>
+            </div>
+            <div class="col-md-3 interview-item">
+                <img src="https://i.scdn.co/image/ab67616100005174a9ad8f2938fc6f11e4dd5337" alt="Entrevista 2">
+                <div class="interview-item-title">Gisela</div>
+                <div class="interview-item-content">Descripción de la entrevista 2.</div>
+            </div>
+            <div class="col-md-3 interview-item">
+                <img src="https://s1.elespanol.com/2024/01/05/mujer/actualidad/822678091_238909620_1706x1280.jpg" alt="Entrevista 3">
+                <div class="interview-item-title">La Muñeka</div>
+                <div class="interview-item-content">Descripción de la entrevista 3.</div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <button class="learn-more">
+                <span class="circle" aria-hidden="true">
+                <span class="icon arrow"></span>
+                </span>
+                <span class="button-text">Ver mas</span>
+            </button>
+        </div>
     </main>
     <footer>
         <p>&copy; 2024 Eloy. Todos los derechos reservados.</p>
@@ -161,3 +304,5 @@
     </div>
 </body>
 </html>
+
+
